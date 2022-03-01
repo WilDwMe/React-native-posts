@@ -1,27 +1,22 @@
-import React from 'react';
-import { View, StyleSheet, Text, FlatList } from 'react-native';
-import { DATA } from '../data';
-import { Post } from '../components/post';
+import React from 'react'
+import { View, Text, StyleSheet } from 'react-native'
 
-export const PostScreen = ({ navigation }) => {
-  const goToPost = () => {
-    navigation.navigate('Post');
-  };
-
+export const PostScreen = ({}) => {
   return (
-    <View style={styles.wrapper}>
-          <FlatList data={DATA} keyExtractor={post => post.id.toString()} renderItem={({ item }) => <Post post={item}/>}/>
+    <View style={styles.center}>
+      <Text>PostScreen</Text>
     </View>
-  );
-};
+  )
+}
+
+PostScreen.navigationOptions = {
+  headerTitle: 'Пост номер 42'
+}
 
 const styles = StyleSheet.create({
   center: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-  },
-  wrapper: {
-    padding: 10,
-  },
-});
+    alignItems: 'center'
+  }
+})

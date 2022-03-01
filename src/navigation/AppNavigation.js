@@ -1,4 +1,5 @@
 
+import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { MainScreen } from '../screens/MainScreen';
 import { PostScreen } from '../screens/PostScreen';
@@ -9,6 +10,7 @@ const Stack = createNativeStackNavigator();
 
 export const AppNavigator = () => {
   return (
+
       <Stack.Navigator initialRouteName="Main">
         <Stack.Screen name="Main" component={MainScreen} options={{
           title: 'Main',
@@ -25,5 +27,6 @@ export const AppNavigator = () => {
           headerTintColor: '#fff',
         }}/>
       </Stack.Navigator>
+
   );
 };
